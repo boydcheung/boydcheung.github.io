@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bo Zhang - Homepage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        section h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .publication-list {
+            list-style: none;
+            padding: 0;
+        }
+        .publication-list li {
+            margin-bottom: 20px;
+        }
+        .publication-list a, .publication-list a:visited{
+            text-decoration: none;
+            color: #007BFF;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BO ZHANG</h1>
+        </header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#publications">Publications</a>
+            <a href="https://scholar.google.com/citations?user=uUNQnu0AAAAJ">Google Scholar</a>
+        </nav>
+        <section id="about">
+            <h2>Short Bio</h2>
+            <p>I am an algorithm strategist at <a href="https://www.meituan.com/en-US/about-us">Meituan</a>. I received BSc from Jilin University (2010) and MSc (Laurea Magistrale) from <a href="https://www.unitn.it/">University of Trento</a> (2013). 
+                My early academic efforts were centered on AutoML, while I was in a NAS team at Xiaomi AI Lab. Currently, my focus is on lightweight VLMs and model compression of LLMs. </p>
+            
+            <p>I was generously invited by Glenn Jocher (CEO of Ultralytics) to introduce our most popular open-source project <a href="https://github.com/meituan/YOLOv6">YOLOv6</a> on YOLO Vision 2022 and 2023. I was also commissioned to author a <a href="https://book.douban.com/subject/30267881/">tour book</a> (2018) about Italy. </p>
+
+            <p>You may reach me at <a href="mailto:zhangboyd@gmail.com">zhangboyd@gmail.com</a>.</p>
+        </section>
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <ul class="publication-list">
+                <li><i>Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference </i><br/>
+                    Qingyuan Li, Bo Zhang, Liang Ye, Yifan Zhang, Wei Wu, Yerui Sun, Lin Ma, Yuchen Xie<br>
+                    [<a href="https://arxiv.org/abs/2412.04964">arXiv</a>]
+                </li>
+                <li><i>A Speed Odyssey for Deployable Quantization of LLMs</i><br>
+                    Qingyuan Li, Ran Meng, Yiduo Li, Bo Zhang, Liang Li, Yifan Lu, Xiangxiang Chu, Yerui Sun, Yuchen Xie<br/>
+                    [<a href="https://arxiv.org/abs/2311.09550">arXiv</a>]
+                </li> 
+                <li><i>VisionLLaMA: A Unified LLaMA Backbone for Vision Tasks</i><br/>
+                    Xiangxiang Chu, Jianlin Su, Bo Zhang, Chunhua Shen<br/>
+                    ECCV 2024
+                </li>
+                <li><i>Norm Tweaking: High-performance Low-bit Quantization of Large Language Models</i><br>
+                    Liang Li, Qingyuan Li, Bo Zhang, Xiangxiang Chu<br>
+                    AAAI 2024
+                </li>
+                <li><i>
+                    MobileVLM V2: Faster and Stronger Baseline for Vision Language Model</i><br>
+                    MobileVLM Team <br>
+                    [<a href="https://arxiv.org/abs/2402.03766">arXiv</a>]
+                </li> 
+                <li><i>YOLOv6: A Single-Stage Object Detection Framework for Industrial Applications</i><br>
+                YOLOv6 Team <br>
+                [<a href="https://arxiv.org/abs/2209.02976">arXiv</a>] | [<a href="https://github.com/meituan/YOLOv6">Github</a>]</li>
+                <li><i>Twins: Revisiting the Design of Spatial Attention in Vision Transformers</i>
+                    <br>Xiangxiang Chu, Zhi Tian, Yuqing Wang, Bo Zhang, Haibing Ren, Xiaolin Wei, Huaxia Xia, Chunhua Shen
+                    <br>NeurIPS 2021</li>   
+                <li><i>Conditional Positional Encodings for Vision Transformers</i><br>
+                    Xiangxiang Chu, Zhi Tian, Bo Zhang, Xinlong Wang, Chunhua Shen<br>
+                    ICLR 2023
+                </li>   
+                <li><i>Fair DARTS: Eliminating Unfair Advantages in Differentiable Architecture Search</i><br/>
+                    Xiangxiang Chu, Tianbao Zhou, Bo Zhang, Jixiang Li<br>
+                    ECCV 2022
+                </li>
+
+                <li>FairNAS: Rethinking Evaluation Fairness of Weight Sharing Neural Architecture Search<br>
+                    Xiangxiang Chu, Bo Zhang, Ruijun Xu<br/>
+                ICCV 2021</li>
+                <li><i>AutoKWS: Keyword Spotting with Differentiable Architecture Search </i> 
+                     <br>Bo Zhang, Wenfeng Li, Qingyuan Li, Weiji Zhuang, Xiangxiang Chu, Yujun Wang
+                     <br>ICASSP 2021</li>
+
+            </ul>
+        </section>
+        <footer>
+            <p>&copy; BO ZHANG All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
