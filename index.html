@@ -7,191 +7,237 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-    --primary: #00a8ff;        /* Futuristic blue */
-    --secondary: #00ffaa;      /* Neon accent */
-    --dark: #0a192f;           /* Deep navy */
-    --light: #e6f1ff;          /* Soft glow */
-    --background: #0a192f;     /* Dark theme */
-    --card-bg: #172a45;        /* Slightly lighter cards */
-    --text: #ccd6f6;           /* Soft white */
-    --text-secondary: #8892b0; /* Muted text */
-}
+            --primary: #00a8ff;        /* Futuristic blue */
+            --secondary: #00ffaa;      /* Neon accent */
+            --dark: #0a192f;           /* Deep navy */
+            --light: #e6f1ff;          /* Soft glow */
+            --background: #0a192f;     /* Dark theme */
+            --card-bg: #172a45;        /* Slightly lighter cards */
+            --text: #ccd6f6;           /* Soft white */
+            --text-secondary: #8892b0; /* Muted text */
+        }
 
-body {
-    font-family: 'Inter', 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background);
-    color: var(--text);
-    line-height: 1.6;
-}
+        body {
+            font-family: 'Inter', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: transparent;
-}
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: transparent;
+        }
 
-header {
-    text-align: center;
-    padding: 2rem 0;
-    position: relative;
-}
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
 
-header::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 25%;
-    width: 50%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--secondary), transparent);
-}
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+        }
 
-header h1 {
-    margin: 0.5rem 0;
-    font-size: 2.5rem;
-    font-weight: 700;
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
+        header h1 {
+            margin: 0.5rem 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
 
-header img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--primary);
-    box-shadow: 0 0 15px rgba(0, 168, 255, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 15px rgba(0, 168, 255, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-header img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 255, 170, 0.7);
-}
+        header img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 170, 0.7);
+        }
 
-nav {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-    gap: 1.5rem;
-}
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
 
-nav a {
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    position: relative;
-}
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
-nav a:hover {
-    color: var(--light);
-    background: rgba(0, 168, 255, 0.1);
-}
+        nav a:visited {
+            color: var(--text-secondary);
+        }
 
-nav a::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--secondary);
-    transition: width 0.3s ease;
-}
+        nav a:hover {
+            color: var(--light);
+            background: rgba(0, 168, 255, 0.1);
+        }
 
-nav a:hover::after {
-    width: 100%;
-}
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
 
-section {
-    margin-bottom: 3rem;
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        nav a:hover::after {
+            width: 100%;
+        }
 
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 168, 255, 0.2);
-}
+        section {
+            margin-bottom: 3rem;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-section h2 {
-    border-bottom: 1px solid rgba(0, 168, 255, 0.3);
-    padding-bottom: 0.5rem;
-    color: var(--primary);
-    font-size: 1.5rem;
-    margin-top: 0;
-}
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 168, 255, 0.2);
+        }
 
-.publication-list {
-    list-style: none;
-    padding: 0;
-}
+        section h2 {
+            border-bottom: 1px solid rgba(0, 168, 255, 0.3);
+            padding-bottom: 0.5rem;
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
 
-.publication-list li {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px dashed rgba(0, 255, 170, 0.2);
-}
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
 
-.publication-list li:last-child {
-    border-bottom: none;
-}
+        a:visited {
+            color: var(--primary);
+        }
 
-.publication-list a {
-    text-decoration: none;
-    color: var(--primary);
-    transition: color 0.3s ease;
-    display: inline-block;
-}
+        a:hover {
+            color: var(--secondary);
+            text-shadow: 0 0 8px rgba(0, 255, 170, 0.3);
+        }
 
-.publication-list a:hover {
-    color: var(--secondary);
-    text-decoration: underline;
-}
+        .publication-list {
+            list-style: none;
+            padding: 0;
+        }
 
-footer {
-    text-align: center;
-    padding: 2rem 0;
-    font-size: 0.9em;
-    color: var(--text-secondary);
-    margin-top: 3rem;
-}
+        .publication-list li {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed rgba(0, 255, 170, 0.2);
+        }
 
-/* Futuristic glowing effect on hover for interactive elements */
-button, a, .clickable {
-    transition: all 0.3s ease;
-}
+        .publication-list li:last-child {
+            border-bottom: none;
+        }
 
-button:hover, a:hover {
-    text-shadow: 0 0 8px rgba(0, 255, 170, 0.7);
-}
+        .publication-list a {
+            display: inline-block;
+            margin-left: 4px;
+        }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-    nav {
-        flex-wrap: wrap;
-    }
-}
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--text-secondary);
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            nav {
+                gap: 0.8rem;
+            }
+            
+            section {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            header img {
+                width: 80px;
+                height: 80px;
+            }
+            
+            nav a {
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+            
+            section h2 {
+                font-size: 1.3rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="icon.jpeg" />
+            <img src="icon.jpeg" alt="Bo Zhang's portrait" />
             <h1>BO ZHANG</h1>
         </header>
         <nav>
@@ -202,21 +248,19 @@ button:hover, a:hover {
         <section id="about">
             <h2>Short Bio</h2>
             <p>I am an algorithm strategist at <a href="https://www.meituan.com/en-US/about-us">Meituan</a>. My current focus is on lightweight VLMs, model compression and inference. I received BSc from Jilin University (2010) and MSc (Laurea Magistrale) from <a href="https://www.unitn.it/">University of Trento</a> (2013). 
-                My early academic efforts were centered on AutoML, while I was in the NAS team at Xiaomi AI Lab.  </p>
-            <p>Throughout my years at Meituan, I have led or collaborated on multiple optimization-driven projects in self-driving (2d/3d object detection, lidar auto-labelling) and MLOps (innovating SOP algorithms of classification/detection/segmentation/OCR etc.). I have also built conversational systems for digital human for online sales and custom service. Recently, I have been dedicated to democratizing MLLMOps within the enterprise, promoting the widespread adoption of cutting-edge AI technologies in real-world applications. </p>
-            <p>I was generously invited by Glenn Jocher (CEO of Ultralytics) to introduce our most popular open-source project <a href="https://github.com/meituan/YOLOv6">YOLOv6</a> on YOLO Vision 2022 and its follow-up in 2023. I was once commissioned to author a <a href="https://book.douban.com/subject/30267881/">tour book</a> (2018) about Italy. </p>
-
+                My early academic efforts were centered on AutoML, while I was in the NAS team at Xiaomi AI Lab.</p>
+            <p>Throughout my years at Meituan, I have led or collaborated on multiple optimization-driven projects in self-driving (2d/3d object detection, lidar auto-labelling) and MLOps (innovating SOP algorithms of classification/detection/segmentation/OCR etc.). I have also built conversational systems for digital human for online sales and custom service. Recently, I have been dedicated to democratizing MLLMOps within the enterprise, promoting the widespread adoption of cutting-edge AI technologies in real-world applications.</p>
+            <p>I was generously invited by Glenn Jocher (CEO of Ultralytics) to introduce our most popular open-source project <a href="https://github.com/meituan/YOLOv6">YOLOv6</a> on YOLO Vision 2022 and its follow-up in 2023. I was once commissioned to author a <a href="https://book.douban.com/subject/30267881/">tour book</a> (2018) about Italy.</p>
             <p>You may reach me at <a href="mailto:zhangboyd@gmail.com">zhangboyd@gmail.com</a>.</p>
         </section>
         <section id="publications">
             <h2>Selected Publications</h2>
             <ul class="publication-list">
-                <li><i>Flash-VL 2B: Optimizing Vision-Language Model Performance for Ultra-Low Latency and High Throughput
-                </i><br/>
+                <li><i>Flash-VL 2B: Optimizing Vision-Language Model Performance for Ultra-Low Latency and High Throughput</i><br/>
                 Bo Zhang, Shuo Li, Runhe Tian, Yang Yang, Jixin Tang, Jinhao Zhou, Lin Ma<br>
                     [<a href="https://arxiv.org/abs/2505.09498">arXiv</a>]
                 </li>
-                <li><i>Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference </i><br/>
+                <li><i>Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference</i><br/>
                     Qingyuan Li, Bo Zhang, Liang Ye, Yifan Zhang, Wei Wu, Yerui Sun, Lin Ma, Yuchen Xie<br>
                     [<a href="https://arxiv.org/abs/2412.04964">arXiv</a>]
                 </li>
@@ -232,8 +276,7 @@ button:hover, a:hover {
                     Liang Li, Qingyuan Li, Bo Zhang, Xiangxiang Chu<br>
                     AAAI 2024
                 </li>
-                <li><i>
-                    MobileVLM V2: Faster and Stronger Baseline for Vision Language Model</i><br>
+                <li><i>MobileVLM V2: Faster and Stronger Baseline for Vision Language Model</i><br>
                     MobileVLM Team <br>
                     [<a href="https://arxiv.org/abs/2402.03766">arXiv</a>]
                 </li> 
@@ -251,14 +294,12 @@ button:hover, a:hover {
                     Xiangxiang Chu, Tianbao Zhou, Bo Zhang, Jixiang Li<br>
                     ECCV 2022
                 </li>
-
-                <li>FairNAS: Rethinking Evaluation Fairness of Weight Sharing Neural Architecture Search<br>
+                <li><i>FairNAS: Rethinking Evaluation Fairness of Weight Sharing Neural Architecture Search</i><br>
                     Xiangxiang Chu, Bo Zhang, Ruijun Xu<br/>
                 ICCV 2021</li>
-                <li><i>AutoKWS: Keyword Spotting with Differentiable Architecture Search </i> 
+                <li><i>AutoKWS: Keyword Spotting with Differentiable Architecture Search</i> 
                      <br>Bo Zhang, Wenfeng Li, Qingyuan Li, Weiji Zhuang, Xiangxiang Chu, Yujun Wang
                      <br>ICASSP 2021</li>
-
             </ul>
         </section>
         <footer>
